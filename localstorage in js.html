@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="name"> Hey Welcome :- </h1>
+    </div>
+    <div>
+        <input  id="username" type="text" placeholder="Enter your name">
+        <button id="click-btn"   type="button">Click Me</button>
+    </div>
+    <script>
+            const username  = document.getElementById("username")
+            const btn = document.getElementById("click-btn");
+            const h1 = document.getElementById("name");
+
+            btn.addEventListener("click",()=> {
+                const value = username.value;
+                localStorage.setItem("username", value);
+                location.reload();
+            })
+
+            window.addEventListener("load",()=> {
+                const value = localStorage.getItem("username");
+                h1.innerText = value
+            })
+    </script>
+</body>
+</html>

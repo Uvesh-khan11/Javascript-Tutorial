@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create dynamic elements</title>
+</head>
+<body>
+    <!-- I write Internal Javascript -->
+     <div id="my-container">
+     </div>
+     <button id="ClickButton">Click me </button>
+</body>
+<script>
+
+// Here We Create Js Logic
+
+// Example No- 1:Create Dynamic Text 
+
+// At First We Get Container Cause We Create Element In The Container And Also We Get Button
+// When User Click On Button So That Element Create In The Container
+
+//let container = document.getElementById('my-container'); // Get Element Container By Id
+//let button = document.getElementById('ClickButton'); // Get Element Button By Id
+
+// Now Do Click Event On Button Using addEventListener
+// button.addEventListener('click',()=>{
+//     const h1 = document.createElement('h1'); //Create Element
+//     h1.innerText = "Hey I Am Uvesh" // Add The Text In the h1
+//     container.appendChild(h1); // Container Append h1(Add h1)
+// });
+
+// Example No - 2 : Create A Dynamic Element List 
+
+// At First We Get Container Cause We Create Element In The Container And Also We Get Button
+// When User Click On Button So That Element Create In The Container
+
+let container = document.getElementById('my-container'); // Get Element Container By Id
+let button = document.getElementById('ClickButton'); // Get Element Button By Id
+
+let c
+count = 1; // We Count Dynamically It Starts With 1
+
+// Now Do Click Event On Button Using addEventListener
+button.addEventListener('click',()=>{
+    const list = document.createElement('li'); //Create Element 
+    list.innerText = count; // Add Number To List
+    container.appendChild(list); // Container Append List(Add List)
+    count++; // It Will Increase The List Number
+});
+
+document.addEventListener('keyup', (e) => {
+    navigator.clipboard.writeText('');
+    alert('Screenshot Disabled');
+})
+
+</script>
+</html>
