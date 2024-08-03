@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Time Is <span id="time"> </span></h1>
+        <button id="btn">Stop Timer</button>
+    </div>
+    <script>
+        const time = document.getElementById("time");
+        const btn = document.getElementById("btn");
+
+        
+        function ShowTime(){
+                const real_time = new Date ()
+                const curret_time = real_time.getHours() + ":" + real_time.getMinutes() + ":" + real_time.getSeconds()
+                time.innerText = curret_time
+        }
+        let interval  = setInterval(ShowTime ,1000)
+
+        btn.addEventListener("click",()=> {
+            clearInterval(interval)
+        })
+    </script>
+</body>
+</html>

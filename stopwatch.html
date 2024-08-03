@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="user-input" type="number" placeholder="Enter your time in seconds" style="width: 15%;">
+        <button id="btn">Start Watch</button>
+    </div>
+    <div>
+        <h1 id="text">Your Time Left <span id="time"></span></h1>
+    </div>
+    <script>
+        let intervalId;
+        let timeLeft;
+        const input = document.getElementById("user-input");
+        const btn = document.getElementById("btn");
+        const time = document.getElementById("time");
+        const text = document.getElementById("text");
+        text.style.display = "none";
+       
+        btn.addEventListener("click",()=> {
+            let value = parseInt(input.value,10);
+            console.log(value);
+
+            timeLeft = value 
+            intervalId =  setInterval(()=> {        
+                timeLeft -= 1
+                console.log(timeLeft);
+                text.style.display = "block";
+                time.innerText = timeLeft
+                if (timeLeft <= 0) {
+                    clearInterval(intervalId);
+                    text.innerText = 
+                    time.innerText = "Your Time Is Over"
+                }
+            },1000)
+        })
+
+    </script>
+</body>
+</html>

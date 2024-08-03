@@ -1,5 +1,7 @@
 const btn = document.getElementById('getLocation');
 
+ 
+
 function gotLocation(postion){
     console.log(postion);
 }
