@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="display" id="dis"></div>
+        <div class="buttons-container">
+            <div class="buttons-line">
+                <div class="buttons" onclick="handleClick(this)" id="Ac">AC</div>
+                <div class="buttons" onclick="handleClick(this)"  id="Ce">CE</div>
+                <div class="buttons" onclick="handleClick(this)" >%</div>
+                <div class="buttons" onclick="handleClick(this)" >/</div>
+            </div>
+            <div class="buttons-line">
+                <div class="buttons" onclick="handleClick(this)">7</div>
+                <div class="buttons" onclick="handleClick(this)">8</div>
+                <div class="buttons" onclick="handleClick(this)">9</div>
+                <div class="buttons" onclick="handleClick(this)">X</div>
+            </div>
+            <div class="buttons-line">
+                <div class="buttons" onclick="handleClick(this)">4</div>
+                <div class="buttons" onclick="handleClick(this)">5</div>
+                <div class="buttons" onclick="handleClick(this)">6</div>
+                <div class="buttons" onclick="handleClick(this)">-</div>
+            </div>
+            <div class="buttons-line last2">
+                <div class="buttons" onclick="handleClick(this)">1</div>
+                <div class="buttons" onclick="handleClick(this)">2</div>
+                <div class="buttons" onclick="handleClick(this)">3</div>
+                <!-- <div class="buttons" id="plus"></div> -->
+            </div>
+            <div class="buttons-line last">
+                <div class="buttons" onclick="handleClick(this)">0</div>
+                <div class="buttons" onclick="handleClick(this)">.</div>
+                <div class="buttons" onclick="handleClick(this)">=</div>
+            </div>
+            <div class="plus" onclick="handleClick(this)">+</div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
