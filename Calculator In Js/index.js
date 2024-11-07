@@ -4,6 +4,7 @@ displayValue = "0";
 let currentOperand = '';
 let firstOperand = null;
 let operator = null;
+
 let waitingForSecondOperand = false; // Flag to indicate if waiting for the second operand
 
 
